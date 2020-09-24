@@ -4,10 +4,10 @@ Resource                    ../Settings.robot
 Resource                    ../Keywords.robot
 
 *** Variable ***
-${EMAIL_FACEBOOK}           emas.mirza@gmail.com
-${EMAIL_GOOGLE}             emas.mirza@gmail.com
-${PASSWORD_FACEBOOK}        chelsea003
-${PASSWORD_GOOGLE}          D17M09Y1993
+${EMAIL_FACEBOOK}           #input your email here
+${EMAIL_GOOGLE}             #input your email here
+${PASSWORD_FACEBOOK}        #input your fb password here 
+${PASSWORD_GOOGLE}          #input your google password here
 ${PROFILE_CHANGE_BANNER}    .profile__change-banner
 
 
