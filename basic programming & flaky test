@@ -1,0 +1,20 @@
+==BASIC PROGRAMMING==
+
+1. int, float, double
+2. string, text
+3. 113
+4. a=12 >>> a/6 = 2
+5. 3566GoldenStreetMiami
+
+
+
+==FLAKY TEST==
+1. Tes yang menampilkan result yg berbeda (pass atau fail) tiap kali dijalankan, tanpa adanya perubahan kode.
+
+2. Saya terbiasa menggunakan robotframework selenium. Untuk mengatasi proses async saya menggunakan keyword sleep() dan timeout(). Sleep() digunakan untuk menunggu data selesai tampil lalu mengeksekusi keyword lain. Timeout() digunakan untuk memberi batasan waktu berapa lama data tsb harus selesai ditampilkan, jika melebihi waktu yg kita tentukan maka peformanya tidak sesuai yg kita harapkan.
+
+3. Untuk kebutuhan testing, input captcha bisa di-skip dengan menambahkan url parameter (request ke programmer). 
+Contoh :
+Semisal https://www.bukalapak.com/register terdapat input captcha. Jika kita tambahkan parameter menjadi https://www.bukalapak.com/register?captcha=false maka halaman tersebut tidak perlu input captcha
+
+
