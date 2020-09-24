@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20200924 14:00:20.159" generator="Robot 3.2.2 (Python 2.7.12 on linux2)">
+<robot rpa="false" generated="20200924 14:50:07.386" generator="Robot 3.2.2 (Python 2.7.12 on linux2)">
 <suite source="/home/kly/Documents/Bukalapak/essay-question-topic/bukalapak-web/non-destructive/TestCase_Login.robot" id="s1" name="TestCase Login">
-<test id="s1-t1" name="Login With Google Plus">
+<test id="s1-t1" name="Login With Facebook">
 <kw type="setup" name="Open Browser To Login Page" library="Keywords">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -9,239 +9,38 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200924 14:00:20.372" level="INFO">Opening browser 'Chrome' to base url 'https://www.bukalapak.com/login'</msg>
-<status status="PASS" endtime="20200924 14:00:33.104" starttime="20200924 14:00:20.371"></status>
+<msg timestamp="20200924 14:50:07.599" level="INFO">Opening browser 'Chrome' to base url 'https://www.bukalapak.com/login'</msg>
+<status status="PASS" endtime="20200924 14:50:11.681" starttime="20200924 14:50:07.599"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<msg timestamp="20200924 14:00:38.105" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20200924 14:00:38.106" starttime="20200924 14:00:33.104"></status>
-</kw>
-<kw name="Push Notif Closer" library="Keywords">
-<kw name="Run Keyword And Ignore Error" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<arguments>
-<arg>Click Element</arg>
-<arg>sizzle=${PUSH_NOTIF_DECLINE}</arg>
-</arguments>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>sizzle=${PUSH_NOTIF_DECLINE}</arg>
-</arguments>
-<msg timestamp="20200924 14:00:38.111" level="FAIL">Variable '${PUSH_NOTIF_DECLINE}' not found.</msg>
-<status status="FAIL" endtime="20200924 14:00:38.111" starttime="20200924 14:00:38.109"></status>
-</kw>
-<status status="PASS" endtime="20200924 14:00:38.111" starttime="20200924 14:00:38.108"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200924 14:00:39.111" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20200924 14:00:39.112" starttime="20200924 14:00:38.111"></status>
-</kw>
-<status status="PASS" endtime="20200924 14:00:39.113" starttime="20200924 14:00:38.106"></status>
+<status status="FAIL" endtime="20200924 14:50:13.952" starttime="20200924 14:50:11.682"></status>
 </kw>
 <timeout value="30 seconds"></timeout>
-<status status="PASS" endtime="20200924 14:00:39.113" starttime="20200924 14:00:20.371"></status>
-</kw>
-<kw name="Click Social Media Login Button" library="Keywords">
-<arguments>
-<arg>Google</arg>
-</arguments>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>sizzle=${SOSMED_LOGIN_BUTTON}:contains("${social_media_type}")</arg>
-</arguments>
-<msg timestamp="20200924 14:00:39.117" level="INFO">Clicking element 'sizzle=.js-tel-social-login:contains("Google")'.</msg>
-<status status="PASS" endtime="20200924 14:00:40.854" starttime="20200924 14:00:39.116"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200924 14:00:41.855" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20200924 14:00:41.855" starttime="20200924 14:00:40.854"></status>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>'${social_media_type}'=='Facebook'</arg>
-<arg>Location Should Contain</arg>
-<arg>www.facebook.com</arg>
-<arg>ELSE IF</arg>
-<arg>'${social_media_type}'=='Google'</arg>
-<arg>Location Should Contain</arg>
-<arg>https://accounts.google.com/</arg>
-</arguments>
-<kw name="Location Should Contain" library="Selenium2Library">
-<doc>Verifies that current URL contains `expected`.</doc>
-<arguments>
-<arg>https://accounts.google.com/</arg>
-</arguments>
-<msg timestamp="20200924 14:00:41.869" level="INFO">Current location contains 'https://accounts.google.com/'.</msg>
-<status status="PASS" endtime="20200924 14:00:41.870" starttime="20200924 14:00:41.858"></status>
-</kw>
-<status status="PASS" endtime="20200924 14:00:41.870" starttime="20200924 14:00:41.856"></status>
-</kw>
-<status status="PASS" endtime="20200924 14:00:41.871" starttime="20200924 14:00:39.114"></status>
-</kw>
-<kw name="Input And Submit Google+ Login Attribute" library="Keywords">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>id=${IDENTIFIER_ID}</arg>
-</arguments>
-<status status="PASS" endtime="20200924 14:00:41.891" starttime="20200924 14:00:41.873"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=${IDENTIFIER_ID}</arg>
-<arg>${EMAIL_GOOGLE}</arg>
-</arguments>
-<msg timestamp="20200924 14:00:41.892" level="INFO">Typing text 'emas.mirza@gmail.com' into text field 'id=identifierId'</msg>
-<status status="PASS" endtime="20200924 14:00:41.986" starttime="20200924 14:00:41.891"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200924 14:00:44.987" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20200924 14:00:44.987" starttime="20200924 14:00:41.986"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=${IDENTIFIER_NEXT}</arg>
-</arguments>
-<msg timestamp="20200924 14:00:44.989" level="INFO">Clicking element 'id=identifierNext'.</msg>
-<status status="PASS" endtime="20200924 14:00:45.068" starttime="20200924 14:00:44.988"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200924 14:00:48.069" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20200924 14:00:48.069" starttime="20200924 14:00:45.068"></status>
-</kw>
-<kw name="Get Location" library="Selenium2Library">
-<doc>Returns the current location.</doc>
-<assign>
-<var>${current_location}</var>
-</assign>
-<msg timestamp="20200924 14:00:48.081" level="INFO">${current_location} = https://accounts.google.com/signin/v2/challenge/pwd?scope=email%20profile&amp;state=eyJzdGF0ZSI6IjE0NTYwNDI3NzI2ZjA2M2Y2YmFkYmIwZmNiMmY4NTYxIiwiY29tZWJhY2siOm51bGx9&amp;redirect_uri=https%3A%2F%2Fwww.bukalapa...</msg>
-<status status="PASS" endtime="20200924 14:00:48.081" starttime="20200924 14:00:48.070"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>dom=${GOOGLE_PASSWORD_FIELD}</arg>
-<arg>${PASSWORD_GOOGLE}</arg>
-</arguments>
-<msg timestamp="20200924 14:00:48.083" level="INFO">Typing text 'D17M09Y1993' into text field 'dom=document.getElementsByName("password")[0]'</msg>
-<status status="PASS" endtime="20200924 14:00:48.189" starttime="20200924 14:00:48.082"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200924 14:00:51.190" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20200924 14:00:51.190" starttime="20200924 14:00:48.189"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>id=${GOOGLE_PASSWORD_NEXT_BUTTON}</arg>
-</arguments>
-<msg timestamp="20200924 14:00:51.192" level="INFO">Clicking element 'id=passwordNext'.</msg>
-<status status="PASS" endtime="20200924 14:00:51.250" starttime="20200924 14:00:51.191"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200924 14:00:54.250" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20200924 14:00:54.251" starttime="20200924 14:00:51.250"></status>
-</kw>
-<status status="PASS" endtime="20200924 14:00:54.251" starttime="20200924 14:00:41.871"></status>
-</kw>
-<kw name="Debug" library="DebugLibrary">
-<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
-<status status="PASS" endtime="20200924 14:01:38.877" starttime="20200924 14:00:54.252"></status>
-</kw>
-<kw name="Logout" library="Keywords">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>0.5</arg>
-</arguments>
-<msg timestamp="20200924 14:01:39.378" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" endtime="20200924 14:01:39.378" starttime="20200924 14:01:38.877"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>sizzle=${DROPDOWN_USER}</arg>
-</arguments>
-<msg timestamp="20200924 14:01:39.378" level="INFO">Clicking element 'sizzle=.bl-avatar.sigil-avatar'.</msg>
-<status status="PASS" endtime="20200924 14:01:39.501" starttime="20200924 14:01:39.378"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200924 14:01:40.501" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20200924 14:01:40.502" starttime="20200924 14:01:39.501"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>sizzle=${LOGOUT}:contains("Logout")</arg>
-</arguments>
-<msg timestamp="20200924 14:01:40.503" level="INFO">Clicking element 'sizzle=.bl-list-item__title:contains("Logout")'.</msg>
-<status status="PASS" endtime="20200924 14:01:43.960" starttime="20200924 14:01:40.502"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200924 14:01:44.961" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20200924 14:01:44.961" starttime="20200924 14:01:43.960"></status>
-</kw>
-<status status="PASS" endtime="20200924 14:01:44.962" starttime="20200924 14:01:38.877"></status>
+<status status="FAIL" endtime="20200924 14:50:13.952" starttime="20200924 14:50:07.599"></status>
 </kw>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20200924 14:01:45.029" starttime="20200924 14:01:44.963"></status>
+<status status="PASS" endtime="20200924 14:50:13.953" starttime="20200924 14:50:13.952"></status>
 </kw>
-<doc>As user, I want to login to the site with my google account</doc>
-<status status="PASS" endtime="20200924 14:01:45.029" critical="yes" starttime="20200924 14:00:20.371"></status>
+<doc>As user, I want to login to the site with my facebook account</doc>
+<status status="FAIL" endtime="20200924 14:50:13.953" critical="yes" starttime="20200924 14:50:07.598">Setup failed:
+Execution terminated by signal</status>
 </test>
-<status status="PASS" endtime="20200924 14:01:45.030" starttime="20200924 14:00:20.161"></status>
+<status status="FAIL" endtime="20200924 14:50:13.954" starttime="20200924 14:50:07.387"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="TestCase Login" pass="1">TestCase Login</stat>
+<stat fail="1" id="s1" name="TestCase Login" pass="0">TestCase Login</stat>
 </suite>
 </statistics>
 <errors>
